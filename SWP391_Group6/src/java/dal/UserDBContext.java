@@ -8,21 +8,21 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.User;
+import model.Customer_User;
 
 /**
  *
  * @author KEISHA
  */
-public class UserDBContext extends DBContext<User> {
+public class UserDBContext extends DBContext<Customer_User> {
 
-    public User getUserByMailAndPass(String username, String password) {
+    public Customer_User getUserByMailAndPass(String username, String password) {
         PreparedStatement stm = null;
-        User user = null;
+        Customer_User user = null;
 
         try {
-            String sql = "Select u.id, u.fullName, u.role FROM [User] u\n"
-                    + " WHERE u.email = ? and password = ?";
+            String sql = "select name_cus, display_name, role_id from Customer\n"
+                    + "where email = ? and password = ?";
 
             stm = connect.prepareStatement(sql);
             stm.setString(1, username);
@@ -30,9 +30,10 @@ public class UserDBContext extends DBContext<User> {
 
             ResultSet rs = stm.executeQuery();
             if (rs.next()) {
-                user = new User();
-                user.setFullName(rs.getString("fullName"));
-                user.setRole(rs.getString("role"));
+                user = new Customer_User();
+                user.setName_cus(rs.getString("name_cus"));
+                user.setDisplay_name(rs.getString("display_name"));
+                user.setRole(rs.getInt("role_id"));
 
             }
 
@@ -59,24 +60,24 @@ public class UserDBContext extends DBContext<User> {
     }
 
     @Override
-    public User get(int id) {
+    public Customer_User get(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public ArrayList<User> list() {
+    public ArrayList<Customer_User> list() {
         PreparedStatement stm = null;
-        ArrayList<User> users = new ArrayList<>();
+        ArrayList<Customer_User> users = new ArrayList<>();
         try {
             String sql = "Select u.id, u.fullName, u.role FROM [User] u\n"
                     + " WHERE role = 'user'";
             stm = connect.prepareStatement(sql);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                User u = new User();
-                u.setFullName(rs.getString("fullName"));
-                u.setRole(rs.getString("role"));
+                Customer_User u = new Customer_User();
+              //  u.set(rs.getString("fullName"));
                 
+
                 users.add(u);
             }
         } catch (SQLException ex) {
@@ -92,6 +93,4 @@ public class UserDBContext extends DBContext<User> {
         return users;
     }
 
-    
-    
 }

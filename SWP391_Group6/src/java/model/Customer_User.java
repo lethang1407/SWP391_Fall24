@@ -8,30 +8,31 @@ package model;
  *
  * @author KEISHA
  */
-public class User {
-    private String id;
-    private String fullName;
+public class Customer_User {
+    private String cus_id;
+    private String name_cus;
     private String email;
     private int phone;
     private boolean status;
-    private String role;
+    private int role;
     private int cart_id;
     private String avatar_url;
+    private String display_name;
 
-    public String getId() {
-        return id;
+    public String getCus_id() {
+        return cus_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCus_id(String cus_id) {
+        this.cus_id = cus_id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getName_cus() {
+        return name_cus;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setName_cus(String name_cus) {
+        this.name_cus = name_cus;
     }
 
     public String getEmail() {
@@ -58,15 +59,13 @@ public class User {
         this.status = status;
     }
 
-    public String getRole() {
+    public int getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(int role) {
         this.role = role;
     }
-
-    
 
     public int getCart_id() {
         return cart_id;
@@ -83,5 +82,14 @@ public class User {
     public void setAvatar_url(String avatar_url) {
         this.avatar_url = avatar_url;
     }
+
+    public String getDisplay_name() {
+        return display_name;
+    }
+
+    public void setDisplay_name(String display_name) {
+        this.display_name = display_name;
+    }
+
     
 }
