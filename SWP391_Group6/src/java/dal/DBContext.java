@@ -32,13 +32,5 @@ public abstract class DBContext<T> {
         }
     }
 
-    public abstract void insert();
-
-    public abstract void delete();
-
-    public abstract void update();
-
-    public abstract T get(int id);
-
-    public abstract ArrayList<T> list();
+ 
 }

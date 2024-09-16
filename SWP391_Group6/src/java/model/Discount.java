@@ -46,6 +46,10 @@ class Discount {
         this.amount = amount;
     }
 
+    
+
+    
+
     public Date getStart() {
         return start;
     }
