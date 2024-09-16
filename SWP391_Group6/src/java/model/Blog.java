@@ -4,18 +4,19 @@
  */
 package model;
 
-import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
  * @author KEISHA
  */
-public class Role {
-    private int role_id;
-    private String role_name;
-    private ArrayList<Feature> features;
-    private ArrayList<Employee_User> emp_users;
-    private ArrayList<Customer_User> cus_users;
-    
+class Blog {
+    private int blog_id;
+    private String title;
+    private String shortContent;
+    private String content;
+    private Date date;
+    private Employee_User employee;
+    private Product product;
     
 }

@@ -10,12 +10,11 @@ import java.util.ArrayList;
  *
  * @author KEISHA
  */
-public class Role {
-    private int role_id;
-    private String role_name;
-    private ArrayList<Feature> features;
-    private ArrayList<Employee_User> emp_users;
-    private ArrayList<Customer_User> cus_users;
-    
-    
+class Image {
+    private int img_id;
+    private String img_url;
+    private Product product;
+    private Feedback feedback;
+    private ArrayList<Slider> slides;
+    private ArrayList<Blog> blog;
 }

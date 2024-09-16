@@ -10,20 +10,16 @@ import java.util.ArrayList;
  *
  * @author KEISHA
  */
-public class Customer_User {
-    private int cus_id;
-    private String name_cus;
-    private String email;
+class Employee_User {
+    private int emp_id;
+    private String name_emp;
     private String password;
-    private int c_phone;
-    private boolean status;
-    private Role role;
-    private Cart cart;
-    private String avatar;
+    private int phone;
     private String display_name;
-    private ArrayList<Address> address;
-    private ArrayList<Order> orders;
-
-    
-    
+    private boolean status;
+    private String avatar;
+    private Role role;
+    private ArrayList<Slider> sliders;
+    private ArrayList<Blog> blogs;
+    private ArrayList<Product> products;
 }

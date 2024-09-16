@@ -4,18 +4,16 @@
  */
 package model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author KEISHA
  */
-public class Role {
-    private int role_id;
-    private String role_name;
-    private ArrayList<Feature> features;
-    private ArrayList<Employee_User> emp_users;
-    private ArrayList<Customer_User> cus_users;
-    
+public class Address {
+    private int a_id;
+    private int a_phone;
+    private String city;
+    private String district;
+    private String detail;
+    private Customer_User customer;
     
 }
