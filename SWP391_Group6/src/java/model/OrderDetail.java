@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  *
  * @author KEISHA
  */
-class OrderDetail {
+public class OrderDetail {
     private int detail_id;
     private Product product;
     private BigDecimal price_at_order;

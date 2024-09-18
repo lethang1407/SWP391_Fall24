@@ -13,7 +13,7 @@ import java.util.Date;
  * @author KEISHA
  */
 
-class Discount {
+public class Discount {
 
     private int discount_id;
     private String name;
