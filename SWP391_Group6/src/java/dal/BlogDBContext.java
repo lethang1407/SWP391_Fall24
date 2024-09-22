@@ -17,35 +17,16 @@ import model.Image;
  */
 public class BlogDBContext extends DBContext<Blog> {
 
-    
-
     public ArrayList<Blog> getBlogForHomepage() {
         PreparedStatement stm = null;
         ArrayList<Blog> blogs = new ArrayList<>();
         try {
-            String sql = "SELECT top 3\n"
-                    + "    b.blog_id,\n"
-                    + "    b.title,\n"
-                    + "    b.shortContent,\n"
-                    + "    b.content,\n"
-                    + "    b.date,\n"
-                    + "    e.name_emp,\n"
-                    + "    i.img_url\n"
-                    + "FROM \n"
-                    + "    dbo.Blog b\n"
-                    + "JOIN \n"
-                    + "    dbo.Employee e ON b.emp_id = e.emp_id\n"
-                    + "LEFT JOIN \n"
-                    + "    dbo.Blog_IMG bi ON b.blog_id = bi.blog_id\n"
-                    + "LEFT JOIN \n"
-                    + "    dbo.Image i ON bi.img_id = i.img_id\n"
-                    + "WHERE \n"
-                    + "    bi.img_id = (\n"
-                    + "        SELECT TOP 1 img_id \n"
-                    + "        FROM dbo.Blog_IMG \n"
-                    + "        WHERE blog_id = b.blog_id\n"
-                    + "        ORDER BY img_id ASC\n"
-                    + "    )";
+            String sql = "SELECT TOP 3 b.blog_id, b.title, b.shortContent, b.content, b.date, e.name_emp, i.img_url \n"
+                    + "FROM dbo.Blog b \n"
+                    + "JOIN dbo.Employee e ON b.emp_id = e.emp_id \n"
+                    + "LEFT JOIN dbo.Blog_IMG bi ON b.blog_id = bi.blog_id \n"
+                    + "LEFT JOIN dbo.Image i ON bi.img_id = i.img_id \n"
+                    + "WHERE bi.img_id = (SELECT TOP 1 img_id FROM dbo.Blog_IMG WHERE blog_id = b.blog_id ORDER BY img_id ASC);";
 
             stm = connect.prepareStatement(sql);
             ResultSet rs = stm.executeQuery();

@@ -4,8 +4,24 @@
         <servlet-name>HomeSliderServlet</servlet-name>
         <servlet-class>controller.home.HomePageServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>controller.account.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerificationEmail</servlet-name>
+        <servlet-class>controller.account.VerificationEmail</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeSliderServlet</servlet-name>
         <url-pattern>/homepage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/account/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerificationEmail</servlet-name>
+        <url-pattern>/VerificationActive</url-pattern>
     </servlet-mapping>
 </web-app>
