@@ -1,22 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author KEISHA
- */
-class Image {
+public class Image {
+
     private int img_id;
     private String img_url;
     private Product product;
     private Feedback feedback;
-    private ArrayList<Slider> slides;
-    private ArrayList<Blog> blog;
+    private ArrayList<Slider> slides = new ArrayList<>();
+    private ArrayList<Blog> blog = new ArrayList<>();
 
     public int getImg_id() {
         return img_id;
@@ -65,6 +58,5 @@ class Image {
     public void setBlog(ArrayList<Blog> blog) {
         this.blog = blog;
     }
-    
-    
+
 }

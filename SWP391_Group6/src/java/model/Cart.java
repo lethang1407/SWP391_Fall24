@@ -1,19 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
+import model.Customer;
 import java.util.ArrayList;
 
-/**
- *
- * @author KEISHA
- */
 public class Cart {
+
     private int cart_id;
-    private Customer_User customer;
-    private ArrayList<Item> items;
+    private Customer customer;
+    private ArrayList<Item> items = new ArrayList<>();
 
     public int getCart_id() {
         return cart_id;
@@ -23,11 +17,11 @@ public class Cart {
         this.cart_id = cart_id;
     }
 
-    public Customer_User getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer_User customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
@@ -38,6 +32,5 @@ public class Cart {
     public void setItems(ArrayList<Item> items) {
         this.items = items;
     }
-    
-    
+
 }

@@ -1,22 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.util.Date;
 
-/**
- *
- * @author KEISHA
- */
-class Blog {
+public class Blog {
+
     private int blog_id;
     private String title;
     private String shortContent;
     private String content;
     private Date date;
-    private Employee_User employee;
+    private Employee employee;
     private Product product;
 
     public int getBlog_id() {
@@ -59,11 +52,11 @@ class Blog {
         this.date = date;
     }
 
-    public Employee_User getEmployee() {
+    public Employee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(Employee_User employee) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
@@ -74,5 +67,5 @@ class Blog {
     public void setProduct(Product product) {
         this.product = product;
     }
-    
+
 }
