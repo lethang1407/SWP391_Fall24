@@ -13,33 +13,24 @@ import java.util.logging.Logger;
  *
  * @author KEISHA
  */
-public abstract class DBContext<T> {
+public abstract class DBContext {
+
     protected Connection connect;
-    
-    public DBContext(){
+
+    public DBContext() {
         try {
-        String username= "Keishaa";
-        String password= "123";
-        String url = "jdbc:sqlserver://localhost\\SQLEXPRESS:1433;databaseName=Project_G6;encrypt=true;trustservercertificate=true;";
-        
-        
+            String username = "son";
+            String password = "123456";
+            String url = "jdbc:sqlserver://localhost\\SQLEXPRESS:1433;databaseName=SWP391;encrypt=true;trustservercertificate=true;";
+
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connect = DriverManager.getConnection(url, username, password);
-            } catch (SQLException ex) {
-                Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
-            }catch (ClassNotFoundException ex) {
+        } catch (SQLException ex) {
+            Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
-        public abstract void insert();
-    
-    public abstract void delete();
-    
-    public abstract void update();
-    
-    public abstract T get(int id);
-    
-    public abstract ArrayList<T> list();
+
+ 
 }
