@@ -4,6 +4,7 @@
  */
 package dal;
 
+
 import model.Image;
 import java.util.ArrayList;
 import model.Slider;
@@ -11,10 +12,12 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 /**
  *
  * @author KEISHA
  */
+
 public class SliderDBContext extends DBContext<Slider> {
 
     
@@ -52,5 +55,6 @@ public class SliderDBContext extends DBContext<Slider> {
         }
         return sliders;
     }
+
 
 }

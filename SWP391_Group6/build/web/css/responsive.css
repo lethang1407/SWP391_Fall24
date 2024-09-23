@@ -1454,7 +1454,9 @@ Version:1.0
 }
 .shop .nice-select {
 	width: 100%;
+
 	display: block;
+
 	margin-top: 4px;
 }
 .shop .view-mode {
@@ -1473,7 +1475,9 @@ Version:1.0
 	width: 100%;
 	display: block;
 	display: inline-block;
+
 	display: block;
+
 }
 .shop .view-mode li a {
 	width: 80px;

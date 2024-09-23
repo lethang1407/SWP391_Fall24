@@ -4,14 +4,23 @@
  */
 package dal;
 
-import model.Image;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
+import model.Gender;
 
 /**
  *
- * @author KEISHA
+ * @author DINH SON
  */
-public class ImageDBContext {
+public class GenderDBContext extends DBContext {
+    
+       
+        
+    
+     
     
     
 }
