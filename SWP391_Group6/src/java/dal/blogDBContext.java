@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.Employee_User;
+import model.Employee;
 import model.Image;
 
 /**
@@ -72,7 +72,7 @@ public class BlogDBContext extends DBContext<Blog> {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee_User e = eDB.getEmployeeByIdForBlog(id);
+                Employee e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 list.add(b);
             }
@@ -101,7 +101,7 @@ public class BlogDBContext extends DBContext<Blog> {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee_User e = eDB.getEmployeeByIdForBlog(id);
+                Employee e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 list.add(b);
             }
@@ -126,7 +126,7 @@ public class BlogDBContext extends DBContext<Blog> {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee_User e = eDB.getEmployeeByIdForBlog(id);
+                Employee e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 b.setContent(rs.getString(4));
 
@@ -162,7 +162,7 @@ public class BlogDBContext extends DBContext<Blog> {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee_User e = eDB.getEmployeeByIdForBlog(id);
+                Employee e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 list.add(b);
             }

@@ -1,23 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+
 /**
  *
  * @author KEISHA
  */
 public class Feedback {
+
     private int fb_id;
     private Date date;
     private String content;
     private int rating;
     private Product product;
     private Customer_User customer;
-    private ArrayList<Image> images;
+    private ArrayList<Image> images = new ArrayList<>();
 
     public int getFb_id() {
         return fb_id;
@@ -67,6 +65,8 @@ public class Feedback {
         this.customer = customer;
     }
 
+    
+    
     public ArrayList<Image> getImages() {
         return images;
     }
@@ -74,7 +74,5 @@ public class Feedback {
     public void setImages(ArrayList<Image> images) {
         this.images = images;
     }
-    
-    
-    
+
 }

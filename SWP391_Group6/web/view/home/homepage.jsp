@@ -1821,12 +1821,12 @@
                     </c:forEach>
                 </div>
             </div>
-        </section>
+        </section> <br><br><br><br>
 
         <!-- End Midium Banner -->
 
         <!-- Start Most Popular -->
-        <div class="product-area most-popular section">
+<!--        <div class="product-area most-popular section">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -1838,9 +1838,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="owl-carousel popular-slider">
-                            <!-- Sử dụng JSTL forEach để lặp qua danh sách sản phẩm -->
+                             Sử dụng JSTL forEach để lặp qua danh sách sản phẩm 
                             <c:forEach var="product" items="${productsss}">
-                                <!-- Single Product -->
+                                 Single Product 
                                 <div class="single-product">
                                     <div class="product-img">
                                         <a href="product-details.html?id=${product.id}">
@@ -1873,13 +1873,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End Single Product -->
+                                 End Single Product 
                             </c:forEach>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
         

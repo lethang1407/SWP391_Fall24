@@ -1,20 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.util.ArrayList;
+
 
 /**
  *
  * @author KEISHA
  */
+
 public class Capacity {
 
     private int capacity_id;
     private int value;
-    private ArrayList<Product> products;
+    private ArrayList<Product> products = new ArrayList<>();
+
+    public Capacity() {
+    }
+
+    
+    public Capacity(int capacity_id, int value) {
+        this.capacity_id = capacity_id;
+        this.value = value;
+    }
+    
+    
+
+
 
     public int getCapacity_id() {
         return capacity_id;

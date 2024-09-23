@@ -1,16 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.util.ArrayList;
+
 
 /**
  *
  * @author KEISHA
  */
-public class Employee_User {
+
+public class Employee {
+
+
     private int emp_id;
     private String name_emp;
     private String password;
@@ -19,10 +19,14 @@ public class Employee_User {
     private boolean status;
     private String avatar;
     private Role role;
-    private ArrayList<Slider> sliders;
-    private ArrayList<Blog> blogs;
-    private ArrayList<Product> products;
+    private ArrayList<Slider> sliders = new ArrayList<>();
+    private ArrayList<Blog> blogs = new ArrayList<>();
+    private ArrayList<Product> products = new ArrayList<>();
 
+    
+    
+    
+    
     public int getEmp_id() {
         return emp_id;
     }
@@ -110,6 +114,5 @@ public class Employee_User {
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
-    
-    
+
 }

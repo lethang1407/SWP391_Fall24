@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author KEISHA
- */
 public class Feature {
+
     private int feature_id;
     private String feature_name;
     private String f_url;
@@ -36,5 +29,5 @@ public class Feature {
     public void setF_url(String f_url) {
         this.f_url = f_url;
     }
-    
+
 }

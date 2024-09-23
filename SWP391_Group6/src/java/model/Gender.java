@@ -1,20 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.util.ArrayList;
+
 
 /**
  *
  * @author KEISHA
  */
+
 public class Gender {
 
     private int gender_id;
     private String name;
-    private ArrayList<Product> products;
+    private ArrayList<Product> products = new ArrayList<>();
+
+    public Gender(int gender_id, String name) {
+        this.gender_id = gender_id;
+        this.name = name;
+    }
+
+    public Gender() {
+    }
+    
+    
 
     public int getGender_id() {
         return gender_id;
