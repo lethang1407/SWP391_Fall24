@@ -65,14 +65,4 @@ public class Image {
     public void setBlog(ArrayList<Blog> blog) {
         this.blog = blog;
     }
-
-    public Image() {
-    }
-
-    public Image(int img_id, String img_url) {
-        this.img_id = img_id;
-        this.img_url = img_url;
-    }
-    
-    
 }

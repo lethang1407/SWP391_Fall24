@@ -49,8 +49,6 @@ public class Role {
         this.emp_users = emp_users;
     }
 
-    
-
     public ArrayList<Customer_User> getCus_users() {
         return cus_users;
     }

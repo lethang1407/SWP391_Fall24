@@ -37,9 +37,8 @@ public class productListDBContext extends DBContext {
             while (rs.next()) {
                 Product p = new Product();
                 Brand b = br.getBrandFindById(rs.getInt(1));
-                Capacity c = cap.getCapacityFindById(rs.getInt(1));
-                Gender g = gen.getGenderFindById(rs.getInt(1));
-                Image ig = image.getImageById(rs.getInt(1));
+                
+                
                 p.setProduct_id(rs.getInt("product_id"));
                 p.setName(rs.getString("name"));
                 p.setDate(rs.getDate("date"));

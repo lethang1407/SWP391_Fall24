@@ -40,12 +40,4 @@ public class Capacity {
         this.products = products;
     }
 
-    public Capacity(int capacity_id, int value) {
-        this.capacity_id = capacity_id;
-        this.value = value;
-    }
-
-    public Capacity() {
-    }
-
 }

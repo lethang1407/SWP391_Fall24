@@ -1,12 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package model;
 
 import java.util.ArrayList;
 
+/**
+ *
+ * @author KEISHA
+ */
 public class Brand {
 
     private int brand_id;
     private String name;
-    private ArrayList<Product> products = new ArrayList<>();
+    private ArrayList<Product> products;
 
     public int getBrand_id() {
         return brand_id;

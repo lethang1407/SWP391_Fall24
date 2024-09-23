@@ -40,12 +40,4 @@ public class Gender {
         this.products = products;
     }
 
-    public Gender(int gender_id, String name) {
-        this.gender_id = gender_id;
-        this.name = name;
-    }
-
-    public Gender() {
-    }
-
 }

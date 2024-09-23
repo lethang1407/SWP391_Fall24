@@ -15,38 +15,6 @@ import java.util.List;
  * @author DINH SON
  */
 public class CapacityDBContext extends DBContext {
-    public Capacity getCapacityFindById(int cid) {
-        String sql = "Select * from Capacity WHERE cap_id=?";
-        try {
-            PreparedStatement st = connect.prepareStatement(sql);
-            st.setInt(1, cid);
-            ResultSet rs = st.executeQuery();
-            while (rs.next()) {
-                Capacity c = new Capacity(rs.getInt(1), rs.getInt(2));
-                return c;
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return null;
-        
-    }
-     public List<Capacity> getAll() {
-        List<Capacity> list = new ArrayList<>();
-        String sql = "Select * from Capacity";
-        try {
-            PreparedStatement st = connect.prepareStatement(sql);
-            ResultSet rs = st.executeQuery();
-            while (rs.next()) {
-                Capacity c = new Capacity(rs.getInt(1), rs.getInt(2));
-                list.add(c);
-            }
-            return list;
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
-        return null;
-
-    }
+    
     
 }
