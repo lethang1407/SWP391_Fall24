@@ -1,26 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package model;
 
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author KEISHA
+ */
 public class Product {
-
     private int product_id;
     private String name;
-    private BigDecimal price;
+    private int price;
     private Date date;
     private int stock;
     private Discount discount;
     private Brand brand;
     private boolean status;
-    private ArrayList<Capacity> capacity = new ArrayList<>();
-    private ArrayList<Gender> gender = new ArrayList<>();
-    private Employee emp;
-    private ArrayList<Image> img = new ArrayList<>();
-    private ArrayList<Feedback> fb = new ArrayList<>();
-    private ArrayList<Item> items = new ArrayList<>();
-    private ArrayList<OrderDetail> orders = new ArrayList<>();
+    private ArrayList<Capacity> capacity;
+    private ArrayList<Gender> gender;
+    private Employee_User emp;
+    private ArrayList<Image> img;
+    private ArrayList<Feedback> fb;
+    private ArrayList<Item> items;
+    private ArrayList<OrderDetail> orders;
 
     public int getProduct_id() {
         return product_id;
@@ -38,13 +45,15 @@ public class Product {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(int price) {
         this.price = price;
     }
+
+    
 
     public Date getDate() {
         return date;
@@ -102,11 +111,11 @@ public class Product {
         this.gender = gender;
     }
 
-    public Employee getEmp() {
+    public Employee_User getEmp() {
         return emp;
     }
 
-    public void setEmp(Employee emp) {
+    public void setEmp(Employee_User emp) {
         this.emp = emp;
     }
 
@@ -141,5 +150,5 @@ public class Product {
     public void setOrders(ArrayList<OrderDetail> orders) {
         this.orders = orders;
     }
-
+    
 }

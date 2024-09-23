@@ -6,7 +6,7 @@ package dal;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import model.Employee;
+import model.Employee_User;
 
 /**
  *
@@ -14,7 +14,7 @@ import model.Employee;
  */
 public class employeeDBContext extends DBContext {
 
-    public Employee getEmployeeByIdForBlog(int id) {
+    public Employee_User getEmployeeByIdForBlog(int id) {
         String sql = "SELECT * FROM Employee where emp_id=?";
         
 
@@ -24,7 +24,7 @@ public class employeeDBContext extends DBContext {
             ResultSet rs = st.executeQuery();
 
             if (rs.next()) {
-                Employee e = new Employee();
+                Employee_User e = new Employee_User();
                 e.setEmp_id(id);
                 e.setName_emp(rs.getString(2));
                  return e;
@@ -40,7 +40,7 @@ public class employeeDBContext extends DBContext {
 
     public static void main(String[] args) {
         employeeDBContext eDb = new employeeDBContext();
-        Employee e = eDb.getEmployeeByIdForBlog(1);
+        Employee_User e = eDb.getEmployeeByIdForBlog(1);
         System.out.println(e.getName_emp());
     }
 }

@@ -2,8 +2,11 @@ package model;
 
 import java.util.ArrayList;
 
-public class Employee {
-
+/**
+ *
+ * @author KEISHA
+ */
+public class Employee_User {
     private int emp_id;
     private String name_emp;
     private String password;
@@ -12,9 +15,9 @@ public class Employee {
     private boolean status;
     private String avatar;
     private Role role;
-    private ArrayList<Slider> sliders = new ArrayList<>();
-    private ArrayList<Blog> blogs = new ArrayList<>();
-    private ArrayList<Product> products = new ArrayList<>();
+    private ArrayList<Slider> sliders;
+    private ArrayList<Blog> blogs;
+    private ArrayList<Product> products;
 
     public int getEmp_id() {
         return emp_id;
@@ -43,7 +46,7 @@ public class Employee {
     public int getPhone() {
         return phone;
     }
-    
+
     public void setPhone(int phone) {
         this.phone = phone;
     }
@@ -103,5 +106,6 @@ public class Employee {
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
-
+    
+    
 }

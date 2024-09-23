@@ -43,7 +43,7 @@ public class productListDBContext extends DBContext {
                 p.setProduct_id(rs.getInt("product_id"));
                 p.setName(rs.getString("name"));
                 p.setDate(rs.getDate("date"));
-                p.setPrice(rs.getBigDecimal("price"));
+                p.setPrice(rs.getInt("price"));
                 
                 p.setBrand(b);
               
@@ -95,7 +95,7 @@ public class productListDBContext extends DBContext {
                 Product p = new Product();
                 p.setProduct_id(rs.getInt(1));
                 p.setName(rs.getString(2));
-                p.setPrice(rs.getBigDecimal(3));
+                p.setPrice(rs.getInt(3));
                 p.setDate(rs.getDate(4));
 
                 list.add(p);

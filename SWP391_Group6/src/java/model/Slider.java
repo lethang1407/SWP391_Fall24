@@ -12,8 +12,17 @@ public class Slider {
     private int slider_id;
     private String title;
     private String description;
-    private Employee employee;
+    private Employee_User employee;
     private Product product;
+    private Image image;
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
 
     public int getSlider_id() {
         return slider_id;
@@ -39,11 +48,11 @@ public class Slider {
         this.description = description;
     }
 
-    public Employee getEmployee() {
+    public Employee_User getEmployee() {
         return employee;
     }
 
-    public void setEmployee(Employee employee) {
+    public void setEmployee(Employee_User employee) {
         this.employee = employee;
     }
 

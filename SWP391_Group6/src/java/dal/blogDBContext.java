@@ -9,7 +9,8 @@ import java.util.List;
 import model.Blog;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import model.Employee;
+
+import model.Employee_User;
 
 /**
  *
@@ -33,7 +34,7 @@ public class blogDBContext extends DBContext {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee e = eDB.getEmployeeByIdForBlog(id);
+                Employee_User e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 list.add(b);
             }
@@ -62,7 +63,7 @@ public class blogDBContext extends DBContext {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee e = eDB.getEmployeeByIdForBlog(id);
+                Employee_User e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 list.add(b);
             }
@@ -87,7 +88,7 @@ public class blogDBContext extends DBContext {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee e = eDB.getEmployeeByIdForBlog(id);
+                Employee_User e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 b.setContent(rs.getString(4));
 
@@ -123,7 +124,7 @@ public class blogDBContext extends DBContext {
                 b.setDate(rs.getDate(5));
                 employeeDBContext eDB = new employeeDBContext();
                 int id = rs.getInt(6);
-                Employee e = eDB.getEmployeeByIdForBlog(id);
+                Employee_User e = eDB.getEmployeeByIdForBlog(id);
                 b.setEmployee(e);
                 list.add(b);
             }

@@ -14,7 +14,7 @@ public class Role {
     private int role_id;
     private String role_name;
     private ArrayList<Feature> features;
-    private ArrayList<Employee> emp_users;
+    private ArrayList<Employee_User> emp_users;
     private ArrayList<Customer_User> cus_users;
 
     public int getRole_id() {
@@ -41,13 +41,15 @@ public class Role {
         this.features = features;
     }
 
-    public ArrayList<Employee> getEmp_users() {
+    public ArrayList<Employee_User> getEmp_users() {
         return emp_users;
     }
 
-    public void setEmp_users(ArrayList<Employee> emp_users) {
+    public void setEmp_users(ArrayList<Employee_User> emp_users) {
         this.emp_users = emp_users;
     }
+
+    
 
     public ArrayList<Customer_User> getCus_users() {
         return cus_users;
