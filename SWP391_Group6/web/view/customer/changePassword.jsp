@@ -302,7 +302,6 @@
                 </ul>
             </div>
         </div>
-
         <!-- End Change Password -->
 
         <!-- Start Footer Area -->

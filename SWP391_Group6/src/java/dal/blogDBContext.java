@@ -55,7 +55,7 @@ public class BlogDBContext extends DBContext<Blog> {
         return blogs;
 
     }
-    
+
     public List<Blog> getBlogTop3Date() {
         List<Blog> list = new ArrayList<>();
 
@@ -218,6 +218,5 @@ public class BlogDBContext extends DBContext<Blog> {
         }
 
     }
-
 
 }

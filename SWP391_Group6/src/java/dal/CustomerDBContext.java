@@ -52,10 +52,10 @@ public class CustomerDBContext extends DBContext<Customer_User> {
                     + "           ,[display_name]\n"
                     + "           ,[status]\n"
                     + "           ,[role_id]\n"
-                    + "           ,[gender_id]\n"
+                    + "           ,[gender]\n"
                     + "           ,[username]\n"
-                    + "           ,[birth_date]\n" 
-                    + "           ,[verification_code])\n" 
+                    + "           ,[birth_date]\n"
+                    + "           ,[verification_code])\n"
                     + "     VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             // Chuẩn bị câu lệnh SQL chèn
@@ -68,7 +68,7 @@ public class CustomerDBContext extends DBContext<Customer_User> {
             stm_insert.setString(6, customer.getDisplay_name());           // display_name
             stm_insert.setBoolean(7, false);                                // status (giả sử là active - true)
             stm_insert.setInt(8, customer.getRole().getRole_id());         // role_id
-            stm_insert.setInt(9, customer.isGender() ? 1 : 0); 
+            stm_insert.setInt(9, customer.isGender() ? 1 : 0);
             stm_insert.setString(10, customer.getUsername());
             stm_insert.setDate(11, customer.getDob());                     // dob (ngày sinh)
             stm_insert.setString(12, customer.getVerificationCode());
@@ -192,7 +192,7 @@ public class CustomerDBContext extends DBContext<Customer_User> {
             stm = connect.prepareStatement(sql);
             stm.setString(1, verificationCode);
             int rowsUpdated = stm.executeUpdate();
-            return rowsUpdated > 0;  
+            return rowsUpdated > 0;
         } catch (SQLException ex) {
             Logger.getLogger(CustomerDBContext.class.getName()).log(Level.SEVERE, null, ex);
             throw ex;
@@ -202,8 +202,6 @@ public class CustomerDBContext extends DBContext<Customer_User> {
             }
         }
     }
-
-
 
     // Lấy thông tin tài khoản khách hàng bằng email và mật khẩu
     public Customer_User getCustomerAccountByEmail(String email, String password) {
@@ -261,7 +259,7 @@ public class CustomerDBContext extends DBContext<Customer_User> {
 
         try (PreparedStatement stm = connect.prepareStatement(sql)) {
             stm.setString(1, customer.getName_cus());
-            stm.setInt(2, customer.isGender()? 1 : 0);
+            stm.setInt(2, customer.isGender() ? 1 : 0);
             stm.setString(3, customer.getC_phone());
             stm.setString(4, customer.getAvatar());
             stm.setInt(5, customer.getCus_id());
@@ -284,7 +282,7 @@ public class CustomerDBContext extends DBContext<Customer_User> {
                     customer.setCus_id(rs.getInt("cus_id"));
                     customer.setName_cus(rs.getString("name_cus"));
                     customer.setEmail(rs.getString("email"));
-                    customer.setGender(rs.getInt("gender") == 1); 
+                    customer.setGender(rs.getBoolean("gender"));
                     customer.setPassword(rs.getString("password"));
                     customer.setC_phone(rs.getString("c_phone"));
                     customer.setStatus(rs.getBoolean("status"));

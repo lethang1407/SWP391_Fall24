@@ -6,7 +6,6 @@ import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import model.Customer_User;
 
 public class ChangePasswordController extends BaseRequiredCustomerAuthenticationController {
@@ -23,13 +22,14 @@ public class ChangePasswordController extends BaseRequiredCustomerAuthentication
         CustomerDBContext db = new CustomerDBContext();
         int cus_id = customer.getCus_id();
 
+        Customer_User dbCustomer = db.getCustomerById(cus_id);
+
         String currentPassword = request.getParameter("currentPassword");
         String newPassword = request.getParameter("newPassword");
         String confirmPassword = request.getParameter("confirmPassword");
 
-
-        // Kiểm tra mật khẩu hiện tại
-        if (customer.getPassword() != null && customer.getPassword().equals(currentPassword)) {
+        // Kiểm tra mật khẩu hiện tại từ cơ sở dữ liệu
+        if (dbCustomer != null && dbCustomer.getPassword() != null && dbCustomer.getPassword().equals(currentPassword)) {
 
             // Kiểm tra nếu mật khẩu mới và xác nhận mật khẩu giống nhau
             if (newPassword != null && newPassword.equals(confirmPassword)) {
