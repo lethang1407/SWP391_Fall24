@@ -20,37 +20,37 @@
         <!-- Title Tag  -->
         <title>Keishaa Perfume</title>
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/favicon.png">
         <!-- Web Font -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
         <!-- StyleSheet -->
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
         <!-- Magnific Popup -->
-        <link rel="stylesheet" href="css/magnific-popup.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.min.css">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.css">
         <!-- Fancybox -->
-        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.fancybox.min.css">
         <!-- Themify Icons -->
-        <link rel="stylesheet" href="css/themify-icons.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/themify-icons.css">
         <!-- Nice Select CSS -->
-        <link rel="stylesheet" href="css/niceselect.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/niceselect.css">
         <!-- Animate CSS -->
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
         <!-- Flex Slider CSS -->
-        <link rel="stylesheet" href="css/flex-slider.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/flex-slider.min.css">
         <!-- Owl Carousel -->
-        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl-carousel.css">
         <!-- Slicknav -->
-        <link rel="stylesheet" href="css/slicknav.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/slicknav.min.css">
 
         <!-- Eshop StyleSheet -->
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
 
 
         <style>
@@ -95,18 +95,6 @@
     </head>
     <body class="js">
 
-        <!-- Preloader -->
-        <div class="preloader">
-            <div class="preloader-inner">
-                <div class="preloader-icon">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-        <!-- End Preloader -->
-
-
         <!-- Header -->
         <header class="header shop">
             <!-- Topbar -->
@@ -129,8 +117,8 @@
                                 <ul class="list-main">
                                     <li><i class="ti-location-pin"></i> Đại Học FPT Hà Nội</li>
 
-                                    <li><i class="ti-user"></i> <a href="#">My account</a></li>
-                                    <li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
+                                    <li><i class="ti-user"></i> <a href="customer_profile">My account</a></li>
+                                    <li><i class="ti-power-off"></i><a href="login">Login</a></li>
                                 </ul>
                             </div>
                             <!-- End Top Right -->
@@ -145,7 +133,7 @@
                         <div class="col-lg-2 col-md-2 col-12">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                                <a href="index.html"><img src="${pageContext.request.contextPath}/img/logo.png" alt="logo"></a>
                             </div>
                             <!--/ End Logo -->
                             <!-- Search Form -->
@@ -199,13 +187,13 @@
                                         <ul class="shopping-list">
                                             <li>
                                                 <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                                <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
+                                                <a class="cart-img" href="#"><img src="${pageContext.request.contextPath}/https://via.placeholder.com/70x70" alt="#"></a>
                                                 <h4><a href="#">Dior Sauvage</a></h4>
                                                 <p class="quantity">1x - <span class="amount">2.800.000 VND</span></p>
                                             </li>
                                             <li>
                                                 <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                                <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
+                                                <a class="cart-img" href="#"><img src="${pageContext.request.contextPath}/https://via.placeholder.com/70x70" alt="#"></a>
                                                 <h4><a href="#">Channel</a></h4>
                                                 <p class="quantity">1x - <span class="amount">2.000.000 VND</span></p>
                                             </li>
@@ -231,58 +219,7 @@
                     <div class="cat-nav-head">
                         <div class="row">
                             <div class="col-lg-3">
-                                <div class="all-category">
-                                    <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
-                                    <ul class="main-category">
-
-                                        <!--                                        <li class="main-mega"><a href="#">best selling <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                                                    <ul class="mega-menu">
-                                                                                        <li class="single-menu">
-                                                                                            <a href="#" class="title-link">Shop men's</a>
-                                                                                            <div class="image">
-                                                                                                <img src="https://via.placeholder.com/225x155" alt="#">
-                                                                                            </div>
-                                                                                            <div class="inner-link">
-                                                                                                <a href="#">Dior Sauvage</a>
-                                                                                                <a href="#">Creed Aventus</a>
-                                                                                                <a href="#">Valentino Uomo</a>
-                                        
-                                                                                            </div>
-                                                                                        </li>
-                                                                                        <li class="single-menu">
-                                                                                            <a href="#" class="title-link">Shop woman's</a>
-                                                                                            <div class="image">
-                                                                                                <img src="https://via.placeholder.com/225x155" alt="#">
-                                                                                            </div>
-                                                                                            <div class="inner-link">
-                                                                                                <a href="#">YSL Yves Saint Laurent</a>
-                                                                                                <a href="#">Prada Paradoxe</a>
-                                                                                                <a href="#">Kenzo Flower</a>
-                                        
-                                                                                            </div>
-                                                                                        </li>
-                                                                                        <li class="single-menu">
-                                                                                            <a href="#" class="title-link">Shop unisex's</a>
-                                                                                            <div class="image">
-                                                                                                <img src="https://via.placeholder.com/225x155" alt="#">
-                                                                                            </div>
-                                                                                            <div class="inner-link">
-                                                                                                <a href="#">Le Labo Another 13</a>
-                                                                                                <a href="#">Moschino Toy 2</a>
-                                                                                                <a href="#">Maison Martin Margiela Replica</a>
-                                        
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li>-->
-                                        <li><a href="#">Best Seller</a></li>
-                                        <li><a href="#">newest</a></li>
-                                        <li><a href="#">top offers</a></li>																																			<li><a href="#">man’s product</a></li>
-                                        <li><a href="#">ladies</a></li>
-                                        <li><a href="#">for man</a></li>
-                                        <li><a href="#">unisex</a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                             <div class="col-lg-9 col-12">
                                 <div class="menu-area">
@@ -291,8 +228,8 @@
                                         <div class="navbar-collapse">	
                                             <div class="nav-inner">	
                                                 <ul class="nav main-menu menu navbar-nav">
-                                                    <li class="active"><a href="#">Home</a></li>
-                                                    <li><a href="#">Product</a></li>												
+                                                    <li class="active"><a href="homepage">Home</a></li>
+                                                    <li><a href="productList">Product</a></li>												
 
                                                     <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
                                                         <ul class="dropdown">
@@ -1826,64 +1763,64 @@
         <!-- End Midium Banner -->
 
         <!-- Start Most Popular -->
-<!--        <div class="product-area most-popular section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title">
-                            <h2>Hot Item</h2>
+        <!--        <div class="product-area most-popular section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-title">
+                                    <h2>Hot Item</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="owl-carousel popular-slider">
+                                     Sử dụng JSTL forEach để lặp qua danh sách sản phẩm 
+        <c:forEach var="product" items="${productsss}">
+             Single Product 
+            <div class="single-product">
+                <div class="product-img">
+                    <a href="product-details.html?id=${product.id}">
+                        <img class="default-img" src="${product.defaultImgUrl}" alt="${product.name}">
+                        <img class="hover-img" src="${product.hoverImgUrl}" alt="${product.name}">
+                        <span class="${product.label}">${product.labelText}</span>
+                    </a>
+                    <div class="button-head">
+                        <div class="product-action">
+                            <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#">
+                                <i class=" ti-eye"></i><span>Quick Shop</span>
+                            </a>
+                            <a title="Wishlist" href="#">
+                                <i class=" ti-heart "></i><span>Add to Wishlist</span>
+                            </a>
+                            <a title="Compare" href="#">
+                                <i class="ti-bar-chart-alt"></i><span>Add to Compare</span>
+                            </a>
+                        </div>
+                        <div class="product-action-2">
+                            <a title="Add to cart" href="#">Add to cart</a>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="owl-carousel popular-slider">
-                             Sử dụng JSTL forEach để lặp qua danh sách sản phẩm 
-                            <c:forEach var="product" items="${productsss}">
-                                 Single Product 
-                                <div class="single-product">
-                                    <div class="product-img">
-                                        <a href="product-details.html?id=${product.id}">
-                                            <img class="default-img" src="${product.defaultImgUrl}" alt="${product.name}">
-                                            <img class="hover-img" src="${product.hoverImgUrl}" alt="${product.name}">
-                                            <span class="${product.label}">${product.labelText}</span>
-                                        </a>
-                                        <div class="button-head">
-                                            <div class="product-action">
-                                                <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#">
-                                                    <i class=" ti-eye"></i><span>Quick Shop</span>
-                                                </a>
-                                                <a title="Wishlist" href="#">
-                                                    <i class=" ti-heart "></i><span>Add to Wishlist</span>
-                                                </a>
-                                                <a title="Compare" href="#">
-                                                    <i class="ti-bar-chart-alt"></i><span>Add to Compare</span>
-                                                </a>
-                                            </div>
-                                            <div class="product-action-2">
-                                                <a title="Add to cart" href="#">Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h3><a href="product-details.html?id=${product.id}">${product.name}</a></h3>
-                                        <div class="product-price">
-                                            <span class="old">${product.oldPrice != null ? '$' + product.oldPrice : ''}</span>
-                                            <span>${'$' + product.price}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                 End Single Product 
-                            </c:forEach>
-                        </div>
+                <div class="product-content">
+                    <h3><a href="product-details.html?id=${product.id}">${product.name}</a></h3>
+                    <div class="product-price">
+                        <span class="old">${product.oldPrice != null ? '$' + product.oldPrice : ''}</span>
+                        <span>${'$' + product.price}</span>
                     </div>
                 </div>
             </div>
-        </div>-->
+             End Single Product 
+        </c:forEach>
+    </div>
+</div>
+</div>
+</div>
+</div>-->
 
 
-        
-        
+
+
         <!--
         
                 <section class="section free-version-banner">
@@ -2342,36 +2279,36 @@
         <!-- /End Footer Area -->
 
         <!-- Jquery -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery-migrate-3.0.0.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery-migrate-3.0.0.js"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
         <!-- Popper JS -->
-        <script src="js/popper.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/popper.min.js"></script>
         <!-- Bootstrap JS -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
         <!-- Color JS -->
-        <script src="js/colors.js"></script>
+        <!--<script src="${pageContext.request.contextPath}/js/colors.js"></script>-->
         <!-- Slicknav JS -->
-        <script src="js/slicknav.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/slicknav.min.js"></script>
         <!-- Owl Carousel JS -->
-        <script src="js/owl-carousel.js"></script>
+        <script src="${pageContext.request.contextPath}/js/owl-carousel.js"></script>
         <!-- Magnific Popup JS -->
-        <script src="js/magnific-popup.js"></script>
+        <script src="${pageContext.request.contextPath}/js/magnific-popup.js"></script>
         <!-- Waypoints JS -->
-        <script src="js/waypoints.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/waypoints.min.js"></script>
         <!-- Countdown JS -->
-        <script src="js/finalcountdown.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/finalcountdown.min.js"></script>
         <!-- Nice Select JS -->
-        <script src="js/nicesellect.js"></script>
+        <script src="${pageContext.request.contextPath}/js/nicesellect.js"></script>
         <!-- Flex Slider JS -->
-        <script src="js/flex-slider.js"></script>
+        <script src="${pageContext.request.contextPath}/js/flex-slider.js"></script>
         <!-- ScrollUp JS -->
-        <script src="js/scrollup.js"></script>
+        <script src="${pageContext.request.contextPath}/js/scrollup.js"></script>
         <!-- Onepage Nav JS -->
-        <script src="js/onepage-nav.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/onepage-nav.min.js"></script>
         <!-- Easing JS -->
-        <script src="js/easing.js"></script>
+        <script src="${pageContext.request.contextPath}/js/easing.js"></script>
         <!-- Active JS -->
-        <script src="js/active.js"></script>
+        <script src="${pageContext.request.contextPath}/js/active.js"></script>
     </body>
 </html>

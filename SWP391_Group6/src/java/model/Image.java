@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 
-
 /**
  *
  * @author KEISHA
@@ -18,15 +17,11 @@ public class Image {
 
     public Image() {
     }
-    
-    
 
     public Image(int img_id, String img_url) {
         this.img_id = img_id;
         this.img_url = img_url;
     }
-    
-    
 
     public int getImg_id() {
         return img_id;

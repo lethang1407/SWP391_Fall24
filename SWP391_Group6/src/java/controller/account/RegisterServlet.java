@@ -163,7 +163,8 @@ public class RegisterServlet extends HttpServlet {
             db.insertCustomer(cus);
 
             // Gửi email xác thực
-            String verificationLink = "http://localhost:9999/SWP391_Group6/VerificationActive?code=" + verificationCode;
+            String contextPath = request.getContextPath(); // Lấy context path của ứng dụng
+            String verificationLink = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + contextPath + "/VerificationActive?code=" + verificationCode;
             IJavaMail mailService = new EmailService();
             boolean emailSent = mailService.send(email, "Account Verification", "Please verify your account.", verificationLink);
 
