@@ -17,7 +17,7 @@ import model.Product;
  *
  * @author DINH SON
  */
-public class productListDBContext extends DBContext {
+public class ProductListDBContext extends DBContext {
 
     public List<Product> getAll(int pageNumber, int pageSize) {
         List<Product> pList = new ArrayList<>();
@@ -231,7 +231,7 @@ public class productListDBContext extends DBContext {
     }
 
     public static void main(String[] args) {
-        productListDBContext pd = new productListDBContext();
+        ProductListDBContext pd = new ProductListDBContext();
         Product p = pd.getByProductId(1);
         for (Capacity x : p.getCapacity()) {
             System.out.println(x.getValue());

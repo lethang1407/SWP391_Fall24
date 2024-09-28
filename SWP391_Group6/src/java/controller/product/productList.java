@@ -2,10 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package product_controller;
+package controller.product;
 
-import dal.ProductDBContext;
-
+import dal.ProductListDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -17,9 +16,9 @@ import model.Product;
 
 /**
  *
- * @author admin
+ * @author DINH SON
  */
-public class productDetail extends HttpServlet {
+public class ProductList extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +37,10 @@ public class productDetail extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet productDetail</title>");
+            out.println("<title>Servlet product_list</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet productDetail at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet product_list at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -56,26 +55,22 @@ public class productDetail extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    private static final int PAGE_SIZE = 2;
-    
+    private static final int PAGE_SIZE = 6;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String pageStr = request.getParameter("page");
-        int pageNumber = (pageStr != null) ? Integer.parseInt(pageStr) : 1;
-        String id = request.getParameter("product_id");
-        ProductDBContext pDb = new ProductDBContext();
-        Product p = pDb.getByProductId(Integer.parseInt(id));
-        int bid = pDb.brandIdbyproductId(Integer.parseInt(id));
-        List<Product> pList = pDb.getListProductByBrandId(bid, Integer.parseInt(id), pageNumber, PAGE_SIZE);
-        int totalProducts = pDb.getTotalBrandId(bid, Integer.parseInt(id));
-        int totalPages = (int) Math.ceil(totalProducts / (double) PAGE_SIZE);
-        request.setAttribute("id", id);
-        request.setAttribute("currentPage", pageNumber);
-        request.setAttribute("totalPages", totalPages);
-        request.setAttribute("list", pList);
-        request.setAttribute("data", p);
-        request.getRequestDispatcher("/view/viewProductList/productDetail.jsp").forward(request, response);
+            String pageStr = request.getParameter("page");
+            int pageNumber = (pageStr != null) ? Integer.parseInt(pageStr) : 1;
+            ProductListDBContext pDb = new ProductListDBContext();
+            List<Product> list = pDb.getAll(pageNumber, PAGE_SIZE);
+            int totalProducts = pDb.getTotalProduct();
+            int totalPages = (int) Math.ceil(totalProducts / (double) PAGE_SIZE);
+            request.setAttribute("currentPage", pageNumber);
+            request.setAttribute("totalPages", totalPages);
+
+            request.setAttribute("data", list);
+            request.getRequestDispatcher("view/viewProductList/productList.jsp").forward(request, response);
     }
 
     /**
@@ -89,7 +84,7 @@ public class productDetail extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            doGet(request, response);
+        processRequest(request, response);
     }
 
     /**
