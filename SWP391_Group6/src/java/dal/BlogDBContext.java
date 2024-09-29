@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package dal;
 
 import java.util.ArrayList;
@@ -9,8 +12,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Employee;
 import model.Image;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-
+/**
+ *
+ * @author KEISHA
+ */
 public class BlogDBContext extends DBContext<Blog> {
 
     public ArrayList<Blog> getBlogForHomepage() {
@@ -201,16 +209,6 @@ public class BlogDBContext extends DBContext<Blog> {
             e.printStackTrace();
         }
         return count;
-    }
-
-    public static void main(String[] args) {
-        BlogDBContext l = new BlogDBContext();
-
-        List<Blog> ldb = l.getBlogTop3Date();
-        for (Blog x : ldb) {
-            System.out.println(x.getBlog_id());
-        }
-
     }
 
 }

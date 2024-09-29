@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package dal;
 
 import java.sql.PreparedStatement;
@@ -12,7 +15,10 @@ import model.Gender;
 import model.Image;
 import model.Product;
 
-
+/**
+ *
+ * @author DINH SON
+ */
 public class ProductListDBContext extends DBContext {
 
     public List<Product> getAll(int pageNumber, int pageSize) {
@@ -161,7 +167,7 @@ public class ProductListDBContext extends DBContext {
             st.setInt(1, bid);
             st.setInt(2, pid);
             ResultSet rs = st.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 return rs.getInt(1);
             }
         } catch (Exception e) {
@@ -225,14 +231,4 @@ public class ProductListDBContext extends DBContext {
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        ProductListDBContext pd = new ProductListDBContext();
-        Product p = pd.getByProductId(1);
-        for (Capacity x : p.getCapacity()) {
-            System.out.println(x.getValue());
-        }
-
-    }
-
 }

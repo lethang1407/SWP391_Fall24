@@ -1,11 +1,17 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package dal;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import model.Employee;
 
-
+/**
+ *
+ * @author admin
+ */
 public class EmployeeDBContext extends DBContext {
 
     public Employee getEmployeeByIdForBlog(int id) {
@@ -30,9 +36,4 @@ public class EmployeeDBContext extends DBContext {
         return null;
     }
 
-    public static void main(String[] args) {
-        EmployeeDBContext eDb = new EmployeeDBContext();
-        Employee e = eDb.getEmployeeByIdForBlog(1);
-        System.out.println(e.getName_emp());
-    }
 }
