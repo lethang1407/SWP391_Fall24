@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package controller.blog;
+package controller.product;
 
-import dal.BlogDBContext;
+import dal.ProductListDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -12,13 +12,13 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
-import model.Blog;
+import model.Product;
 
 /**
  *
- * @author admin
+ * @author DINH SON
  */
-public class BlogSearch extends HttpServlet {
+public class ProductList extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +37,10 @@ public class BlogSearch extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet blogSearch</title>");
+            out.println("<title>Servlet product_list</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet blogSearch at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet product_list at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,22 +60,17 @@ public class BlogSearch extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String search = request.getParameter("search");
-        if (search.isEmpty()) {
-            response.sendRedirect("blogList");
-        } else {
             String pageStr = request.getParameter("page");
             int pageNumber = (pageStr != null) ? Integer.parseInt(pageStr) : 1;
-            BlogDBContext blogDB = new BlogDBContext();
-            List<Blog> list = blogDB.getAllSearchByTittle(search,pageNumber, PAGE_SIZE);
-            int totalProducts = blogDB.getTotalBlogsBySearch(search);
+            ProductListDBContext pDb = new ProductListDBContext();
+            List<Product> list = pDb.getAll(pageNumber, PAGE_SIZE);
+            int totalProducts = pDb.getTotalProduct();
             int totalPages = (int) Math.ceil(totalProducts / (double) PAGE_SIZE);
-            request.setAttribute("search", search);
             request.setAttribute("currentPage", pageNumber);
             request.setAttribute("totalPages", totalPages);
+
             request.setAttribute("data", list);
-            request.getRequestDispatcher("view/blog/blogSearch.jsp").forward(request, response);
-        }
+            request.getRequestDispatcher("view/viewProductList/productList.jsp").forward(request, response);
     }
 
     /**

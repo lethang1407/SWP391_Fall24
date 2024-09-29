@@ -20,7 +20,7 @@ import model.Blog;
  *
  * @author admin
  */
-public class blogList extends HttpServlet {
+public class BlogList extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
