@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import model.Blog;
 import model.Brand;
 import model.Capacity;
 import model.Discount;
@@ -13,10 +12,7 @@ import model.Gender;
 import model.Image;
 import model.Product;
 
-/**
- *
- * @author DINH SON
- */
+
 public class ProductListDBContext extends DBContext {
 
     public List<Product> getAll(int pageNumber, int pageSize) {
