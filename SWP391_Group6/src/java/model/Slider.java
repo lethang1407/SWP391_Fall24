@@ -1,5 +1,6 @@
 package model;
 
+
 public class Slider {
 
     private int slider_id;
@@ -8,14 +9,7 @@ public class Slider {
     private Employee employee;
     private Product product;
     private Image image;
-
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
-    }
+    private String status;
 
     public int getSlider_id() {
         return slider_id;
@@ -57,4 +51,21 @@ public class Slider {
         this.product = product;
     }
 
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    
 }

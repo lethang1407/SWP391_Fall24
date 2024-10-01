@@ -2,12 +2,10 @@ package model;
 
 import java.util.ArrayList;
 
-
 /**
  *
  * @author KEISHA
  */
-
 public class Gender {
 
     private int gender_id;
@@ -21,8 +19,6 @@ public class Gender {
 
     public Gender() {
     }
-    
-    
 
     public int getGender_id() {
         return gender_id;
