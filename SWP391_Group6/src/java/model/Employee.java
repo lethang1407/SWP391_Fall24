@@ -2,20 +2,17 @@ package model;
 
 import java.util.ArrayList;
 
-
 /**
  *
  * @author KEISHA
  */
-
 public class Employee {
-
 
     private int emp_id;
     private String name_emp;
     private String password;
     private int phone;
-    private String display_name;
+    private String email;
     private boolean status;
     private String avatar;
     private Role role;
@@ -23,10 +20,6 @@ public class Employee {
     private ArrayList<Blog> blogs = new ArrayList<>();
     private ArrayList<Product> products = new ArrayList<>();
 
-    
-    
-    
-    
     public int getEmp_id() {
         return emp_id;
     }
@@ -59,12 +52,12 @@ public class Employee {
         this.phone = phone;
     }
 
-    public String getDisplay_name() {
-        return display_name;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDisplay_name(String display_name) {
-        this.display_name = display_name;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public boolean isStatus() {
