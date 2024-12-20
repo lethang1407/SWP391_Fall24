@@ -2,5 +2,7 @@ package controller.email;
 
 public interface IJavaMail {
 
-    boolean send(String sendTo, String topic, String message);
+    boolean sendResetPassword(String sendTo, String topic, String tokenReset);
+    
+    boolean sendAccountVerification (String sendTo, String topic, String codeVerify );
 }
