@@ -57,6 +57,13 @@ public class EmailService implements IJavaMail {
         }
     }
 
+    /**
+     *
+     * @param sendTo
+     * @param topic
+     * @param codeVerify
+     * @return
+     */
     @Override
     public boolean sendAccountVerification(String sendTo, String topic, String codeVerify) {
         Properties props = new Properties();
